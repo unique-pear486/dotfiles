@@ -12,7 +12,8 @@ git config --global core.excludesfile ~/.cvsignore
 mkdir -p ~/.vim/tmp
 
 # install and pull submodules
-## for $1 in 
+git submodule init
+git submodule update
 
 # make links from location to dotfiles
 read -p 'old-dotfiles will be overwritten! OK? ' yn
@@ -27,6 +28,8 @@ for filename in \
     ~/.vimrc \
     ~/.vim/autoload/pathogen.vim  \
     ~/.cvsignore \
+    ~/.inputrc \
+    ~/.vim/bundle/python-mode \
     ;
 do
     if [ -L $filename ]
