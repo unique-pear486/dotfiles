@@ -2,11 +2,16 @@
 
 # dotfiles deployment file
 
-# Install useful programs
-## apt-get install vim
+# Install useful programs if -p option is called
+if [[ "$1" = "-p" ]]
+then
+    ./packages.sh
+fi
 
 # Git settings
 git config --global core.excludesfile ~/.cvsignore
+git config --global user.name "unique-pear486"
+git config --global user.email "unique-pear486@users.noreply.github.com"
 
 # vim settings
 mkdir -p ~/.vim/tmp
