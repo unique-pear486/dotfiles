@@ -3,7 +3,7 @@ set nocompatible
 map Q gq
 
 " enable pathogen
-runtime autoload/pathogen/pathogen.vim
+runtime autoload/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
