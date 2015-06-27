@@ -38,6 +38,7 @@ for filename in \
     ~/.vim/bundle/python-mode \
     ~/.vim/bundle/solarized \
     ~/.vim/autoload/vim-pathogen \
+    ~/.vim/bundle/vim-fugitive \
     ;
 do
     if [ -L $filename ]
