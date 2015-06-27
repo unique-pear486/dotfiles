@@ -67,3 +67,6 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
+" enable Tagbar
+nnoremap <F8> :TagbarToggle<CR>
+let g:tagbar_left=1

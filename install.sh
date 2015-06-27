@@ -40,6 +40,7 @@ for filename in \
     ~/.vim/bundle/solarized \
     ~/.vim/autoload/vim-pathogen \
     ~/.vim/bundle/vim-fugitive \
+    ~/.vim/bundle/tagbar \
     ;
 do
     if [ -L $filename ]
