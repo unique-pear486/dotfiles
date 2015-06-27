@@ -29,12 +29,14 @@ case $yn in
             mv /tmp/.gitignore old-dotfiles/;;
     * ) exit;;
 esac
+
 for filename in \
     ~/.vimrc \
     ~/.vim/autoload/pathogen.vim  \
     ~/.cvsignore \
     ~/.inputrc \
     ~/.vim/bundle/python-mode \
+    ~/.vim/bundle/solarized \
     ;
 do
     if [ -L $filename ]
