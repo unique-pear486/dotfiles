@@ -12,6 +12,7 @@ fi
 git config --global core.excludesfile ~/.cvsignore
 git config --global user.name "unique-pear486"
 git config --global user.email "unique-pear486@users.noreply.github.com"
+git config --global push.default simple
 
 # vim settings
 mkdir -p ~/.vim/tmp
