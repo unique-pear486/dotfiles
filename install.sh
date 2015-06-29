@@ -41,6 +41,7 @@ for filename in \
     ~/.vim/autoload/vim-pathogen \
     ~/.vim/bundle/vim-fugitive \
     ~/.vim/bundle/tagbar \
+    ~/.vim/bundle/tcomment_vim \
     ;
 do
     if [ -L $filename ]
