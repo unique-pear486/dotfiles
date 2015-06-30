@@ -36,6 +36,10 @@ set ruler
 set showcmd
 set showmode
 
+" set vim to smart-match searches
+set ignorecase
+set smartcase
+
 " highlight searches and partial searches
 set hlsearch
 set incsearch
