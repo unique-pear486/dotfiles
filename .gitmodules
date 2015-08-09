@@ -1,6 +1,3 @@
-[submodule "python-mode"]
-	path = python-mode
-	url = https://github.com/klen/python-mode.git
 [submodule "solarized"]
 	path = solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
@@ -19,3 +16,9 @@
 [submodule "vim-surround"]
 	path = vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "jedi-vim"]
+	path = jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "supertab"]
+	path = supertab
+	url = https://github.com/ervandew/supertab.git

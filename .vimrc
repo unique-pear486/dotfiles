@@ -74,3 +74,15 @@ endif
 " enable Tagbar
 nnoremap <F8> :TagbarToggle<CR>
 let g:tagbar_left=1
+
+" turn on folding
+set foldmethod=indent
+set foldlevel=99
+
+" allow backspacing linebreaks and past the start of the edit/insert
+set backspace=2
+
+" set font
+if has('win32')
+  set guifont=consolas:h11
+endif

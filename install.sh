@@ -36,13 +36,14 @@ for filename in \
     ~/.vim/autoload/pathogen.vim  \
     ~/.cvsignore \
     ~/.inputrc \
-    ~/.vim/bundle/python-mode \
+    ~/.vim/bundle/jedi-vim \
     ~/.vim/bundle/solarized \
     ~/.vim/autoload/vim-pathogen \
     ~/.vim/bundle/vim-fugitive \
     ~/.vim/bundle/tagbar \
     ~/.vim/bundle/tcomment_vim \
     ~/.vim/bundle/vim-surround \
+    ~/.vim/bundle/supertab \
     ;
 do
     if [ -L $filename ]
