@@ -19,11 +19,8 @@ set ts=4
 " indent when moving to the next line while writing code
 set autoindent
 
-" expand tabs into spaces
-set expandtab
-
-" when using the >> or << commands, shift lines by 4 spaces
-set shiftwidth=4
+" expand tabs into spaces set tabs to 4 spaces
+set expandtab shiftwidth=4 softtabstop=4
 
 " show a visual line under the cursor's current line
 set cursorline
@@ -86,3 +83,9 @@ set backspace=2
 if has('win32')
   set guifont=consolas:h11
 endif
+
+" highlight the 80th column and the 120th onwards
+let &colorcolumn="80,".join(range(120,999),",")
+
+" set supertab to default to OmniCompletion
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
