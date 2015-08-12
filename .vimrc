@@ -90,3 +90,6 @@ let &colorcolumn="80,".join(range(120,999),",")
 " set supertab to default to OmniCompletion
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabLongestEnhanced = 1
+
+" let Gd open a git diff of the whole repo
+command Gd Gsplit! diff
