@@ -87,6 +87,12 @@ endif
 " highlight the 80th column and the 120th onwards
 let &colorcolumn="80,".join(range(120,999),",")
 
+" set textwidth=80 for python files
+augroup filetype_python
+    autocmd!
+    autocmd Filetype python set textwidth=80
+augroup END
+
 " set supertab to default to OmniCompletion
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabLongestEnhanced = 1
