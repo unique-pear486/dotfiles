@@ -18,8 +18,8 @@ git config --global push.default simple
 mkdir -p ~/.vim/tmp
 
 # install and pull submodules
-git submodule init
-git submodule update
+git submodule update --init --recursive
+git submodule update --recursive
 
 # make links from location to dotfiles
 read -p 'old-dotfiles will be overwritten! OK? ' yn
