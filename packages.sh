@@ -8,7 +8,7 @@ fi
 
 apt-get update
 
-for package in vim-gtk python3 exuberant-ctags
+for package in vim-gtk python3 exuberant-ctags tree
 do
     apt-get install -y $package
 done
