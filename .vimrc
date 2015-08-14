@@ -98,4 +98,4 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabLongestEnhanced = 1
 
 " let Gd open a git diff of the whole repo
-command Gd Gsplit! diff
+command -nargs=* Gd Gsplit! diff <args>
