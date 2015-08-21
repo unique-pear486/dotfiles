@@ -44,6 +44,8 @@ for filename in \
     ~/.vim/bundle/tcomment_vim \
     ~/.vim/bundle/vim-surround \
     ~/.vim/bundle/supertab \
+    ~/.bashrc \
+    ~/.pythonrc.py \
     ;
 do
     if [ -L $filename ]
