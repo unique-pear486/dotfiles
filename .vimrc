@@ -2,6 +2,20 @@
 set nocompatible
 map Q gq
 
+" Add the virtualenv's site-packages to vim path
+if has('python')
+py << EOF
+import os.path
+import sys
+import vim
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    sys.path.insert(0, project_base_dir)
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
+endif
+
 " enable pathogen
 runtime autoload/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
@@ -99,3 +113,11 @@ let g:SuperTabLongestEnhanced = 1
 
 " let Gd open a git diff of the whole repo
 command -nargs=* Gd Gsplit! diff <args>
+
+" force .md files to be recognised as markdown not Modula-2
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+" set textwidth=80 for markdown files
+augroup filetype_markdown
+    autocmd!
+    autocmd Filetype markdown set textwidth=80
+augroup END
