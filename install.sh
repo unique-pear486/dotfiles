@@ -13,6 +13,7 @@ git config --global core.excludesfile ~/.cvsignore
 git config --global user.name "unique-pear486"
 git config --global user.email "unique-pear486@users.noreply.github.com"
 git config --global push.default simple
+git config --global alias.hist 'log --graph --full-history --all --pretty=format:"%Cred%h%Creset %ad %<(40,trunc) %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset" --date=short'
 
 # vim settings
 mkdir -p ~/.vim/tmp
