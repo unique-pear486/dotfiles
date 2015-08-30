@@ -121,3 +121,12 @@ augroup filetype_markdown
     autocmd!
     autocmd Filetype markdown set textwidth=80
 augroup END
+
+" Set smartcase off for HTML (stuffs up HTML autocomplete)
+" Set tabspace = 2 for HTML
+augroup filetype_html
+    autocmd!
+    autocmd Filetype html set noignorecase
+    autocmd Filetype html set nosmartcase
+    autocmd Filetype html set ts=2 expandtab shiftwidth=2 softtabstop=2
+augroup END
