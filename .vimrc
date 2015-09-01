@@ -130,3 +130,6 @@ augroup filetype_html
     autocmd Filetype html set nosmartcase
     autocmd Filetype html set ts=2 expandtab shiftwidth=2 softtabstop=2
 augroup END
+
+" Set CTRL-Tab to change recent buffer in normal mode
+nnoremap <c-tab> :b#<cr>
