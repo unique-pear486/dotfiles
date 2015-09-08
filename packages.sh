@@ -21,11 +21,11 @@ if ! [ -d "/opt/google_appengine" ]; then
     unzip -q /tmp/GAE.zip -d /opt/
     rm /tmp/GAE.zip
     if ! grep -q "google app engine" ~/.profile ; then
-        echo
         echo "Adding GAE to .profile"
+        echo "" >> ~/.profile
         echo "# Installed google app engine" >> ~/.profile
-        echo "export PATH=$PATH:/opt/google_appengine" >> ~/.profile
-        echo "export PYTHONPATH=$PYTHONPATH:/opt/google_appengine" >> ~/.profile
+        echo "export PATH=\$PATH:/opt/google_appengine" >> ~/.profile
+        echo "export PYTHONPATH=\$PYTHONPATH:/opt/google_appengine" >> ~/.profile
     fi
 fi
 
@@ -37,10 +37,10 @@ if ! [ -d "/opt/node.js" ]; then
     mv /opt/node-v0.12.7-linux-x64 /opt/node
     rm /tmp/node.tar.gz
     if ! grep -q "node.js" ~/.profile ; then
-        echo
         echo "Adding node.js to .profile"
+        echo "" >> ~/.profile
         echo "# Installed node.js and eslint" >> ~/.profile
-        echo "export PATH=$PATH:/opt/node/bin" >> ~/.profile
+        echo "export PATH=\$PATH:/opt/node/bin" >> ~/.profile
         export PATH=$PATH:/opt/node/bin
     fi
 fi
