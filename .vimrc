@@ -93,9 +93,11 @@ set foldlevel=99
 " allow backspacing linebreaks and past the start of the edit/insert
 set backspace=2
 
-" set font
+" Windows vs Linux commands
 if has('win32')
-  set guifont=consolas:h11
+    set guifont=consolas:h11
+else
+    autocmd GUIEnter * call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
 endif
 
 " highlight the 80th column and the 120th onwards
