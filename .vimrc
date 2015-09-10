@@ -103,10 +103,10 @@ endif
 " highlight the 80th column and the 120th onwards
 let &colorcolumn="80,".join(range(120,999),",")
 
-" set textwidth=80 for python files
+" set textwidth=79 for python files
 augroup filetype_python
     autocmd!
-    autocmd Filetype python set textwidth=80
+    autocmd Filetype python set textwidth=79
 augroup END
 
 " set supertab to default to OmniCompletion
