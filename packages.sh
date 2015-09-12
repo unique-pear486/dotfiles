@@ -16,8 +16,8 @@ done
 
 # Get google app engine if not already installed
 if ! [ -d "/opt/google_appengine" ]; then
-    echo "installing Google App Engine v1.9.25"
-    wget -O /tmp/GAE.zip https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.25.zip
+    echo "installing Google App Engine v1.9.26"
+    wget -O /tmp/GAE.zip https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.26.zip
     unzip -q /tmp/GAE.zip -d /opt/
     rm /tmp/GAE.zip
     if ! grep -q "google app engine" ~/.profile ; then
@@ -30,7 +30,7 @@ if ! [ -d "/opt/google_appengine" ]; then
 fi
 
 # Get node if not already installed
-if ! [ -d "/opt/node.js" ]; then
+if ! [ -d "/opt/node" ]; then
     echo "installing node.js v0.12.7 x64"
     wget -O /tmp/node.tar.gz https://nodejs.org/dist/v0.12.7/node-v0.12.7-linux-x64.tar.gz
     tar xzf /tmp/node.tar.gz -C /opt/
@@ -41,12 +41,14 @@ if ! [ -d "/opt/node.js" ]; then
         echo "" >> ~/.profile
         echo "# Installed node.js and eslint" >> ~/.profile
         echo "export PATH=\$PATH:/opt/node/bin" >> ~/.profile
-        export PATH=$PATH:/opt/node/bin
     fi
 fi
 
+export PATH=$PATH:/opt/node/bin
 # Get node packages
 for package in eslint
 do
-    npm install -g $package
+    if ! npm list -g $package ; then
+        npm install -g $package
+    fi
 done
