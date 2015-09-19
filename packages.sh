@@ -9,7 +9,7 @@ fi
 
 apt-get update
 
-for package in vim-gtk python3 exuberant-ctags tree
+for package in vim-gtk python3 exuberant-ctags tree python-pip python-virtualenv
 do
     apt-get install -y $package
 done
