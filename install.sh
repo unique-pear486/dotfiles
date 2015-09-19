@@ -71,7 +71,7 @@ dotfiles() {
 while getopts "pds" o; do
     case "${o}" in
         s)
-            echo "change system settings";;
+            ./system.sh;;
         p)
             ./packages.sh;;
         d)

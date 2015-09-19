@@ -1,0 +1,9 @@
+deb http://mirror.internode.on.net/pub/linuxmint-packages rafaela main upstream import 
+
+deb http://extra.linuxmint.com rafaela main
+
+deb http://mirror.internode.on.net/pub/ubuntu/ubuntu trusty main restricted universe multiverse
+deb http://mirror.internode.on.net/pub/ubuntu/ubuntu trusty-updates main restricted universe multiverse
+
+deb http://security.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://archive.canonical.com/ubuntu/ trusty partner
