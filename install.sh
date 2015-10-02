@@ -53,6 +53,7 @@ dotfiles() {
         ~/.vim/bundle/syntastic \
         ~/.bashrc \
         ~/.pythonrc.py \
+        ~/.abcde.conf \
         ;
     do
         if [ -L $filename ]
