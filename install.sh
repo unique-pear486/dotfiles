@@ -19,6 +19,7 @@ dotfiles() {
     git config --global user.email "unique-pear486@users.noreply.github.com"
     git config --global push.default simple
     git config --global alias.hist 'log --graph --full-history --all --pretty=format:"%Cred%h%Creset %ad %<(40,trunc) %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset" --date=short'
+    git config --global init.templatedir '~/.git_template'
 
     # vim settings
     mkdir -p ~/.vim/tmp
@@ -54,6 +55,7 @@ dotfiles() {
         ~/.bashrc \
         ~/.pythonrc.py \
         ~/.abcde.conf \
+        ~/.git_template \
         ;
     do
         if [ -L $filename ]

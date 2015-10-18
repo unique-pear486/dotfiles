@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e
+
+# Find the .git folder of the module we're in
+dir="`git rev-parse --git-dir`"
+
+# Make a lock folder so that we only only one one update at a time
+mkdir "$dir/tags_lock" 2>/dev/null || exit 0
+
+# After we're done delete the lock folder and our temp tags folder
+trap 'rmdir "$dir/tags_lock"; rm -f "$dir/$$.tags"' EXIT
+
+# run ctags on the git files. Anything ignored by git will be ignored by ctags
+git ls-files | \
+    ctags --tag-relative -L - -f"$dir/$$.tags" --languages=-javascript,sql
+mv "$dir/$$.tags" "$dir/tags"
