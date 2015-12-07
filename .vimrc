@@ -162,3 +162,6 @@ let g:jedi#popup_on_dot = 0
 " Switch zA and za, more often I want zA
 nnoremap zA za
 nnoremap za zA
+
+" Make diffs split the screen vertically, not horizontally
+set diffopt+=vertical
