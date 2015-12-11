@@ -47,6 +47,7 @@ dotfiles() {
         ~/.vim/bundle/solarized \
         ~/.vim/autoload/vim-pathogen \
         ~/.vim/bundle/vim-fugitive \
+        ~/.vim/bundle/vim-unimpaired \
         ~/.vim/bundle/tagbar \
         ~/.vim/bundle/tcomment_vim \
         ~/.vim/bundle/vim-surround \
