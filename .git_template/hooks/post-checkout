@@ -1,2 +1,11 @@
 #!/bin/sh
+## Generate ctags file
 .git/hooks/ctags >/dev/null 2>&1 &
+
+## Remove old pyc files and empty directories
+# Start from the repository root.
+cd ./$(git rev-parse --show-cdup)
+
+# Delete .pyc files and empty directories.
+find . -name "*.pyc" -delete
+find . -type d -empty -delete
