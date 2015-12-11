@@ -135,9 +135,9 @@ augroup END
 " Set tabspace = 2 for HTML
 augroup filetype_html
     autocmd!
-    autocmd Filetype html set noignorecase
-    autocmd Filetype html set nosmartcase
-    autocmd Filetype *html set ts=2 expandtab shiftwidth=2 softtabstop=2
+    autocmd Filetype html,htmldjango set noignorecase
+    autocmd Filetype html,htmldjango set nosmartcase
+    autocmd Filetype html,htmldjango setlocal ts=2 expandtab shiftwidth=2 softtabstop=2
 augroup END
 
 " Set CTRL-Tab to change recent buffer in normal mode
@@ -153,7 +153,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_python_checkers = ['flake8']
 nnoremap <F7> :SyntasticReset<CR>
 
