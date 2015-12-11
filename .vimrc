@@ -114,13 +114,20 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabLongestEnhanced = 1
 
 " let Gd open a git diff of the whole repo
-command -nargs=* Gd Gsplit! diff <args>
+if !exists(":Gd")
+    command -nargs=* Gd Gsplit! diff <args>
+endif
+" delete fugitive buffers on close
+augroup fugitive
+    autocmd!
+    autocmd BufReadPost fugitive://* set bufhidden=delete
+augroup END
 
 " force .md files to be recognised as markdown not Modula-2
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " set textwidth=80 for markdown files
 augroup filetype_markdown
     autocmd!
+    autocmd BufNewFile,BufReadPost *.md set filetype=markdown
     autocmd Filetype markdown set textwidth=80
 augroup END
 
