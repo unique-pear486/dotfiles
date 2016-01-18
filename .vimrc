@@ -170,5 +170,8 @@ let g:jedi#popup_on_dot = 0
 nnoremap zA za
 nnoremap za zA
 
+" Set Y to yank to the end of the line, like D, C, etc
+nnoremap Y y$
+
 " Make diffs split the screen vertically, not horizontally
 set diffopt+=vertical
