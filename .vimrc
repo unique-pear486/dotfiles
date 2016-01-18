@@ -106,7 +106,7 @@ let &colorcolumn="80,".join(range(120,999),",")
 " set textwidth=79 for python files
 augroup filetype_python
     autocmd!
-    autocmd Filetype python set textwidth=79
+    autocmd Filetype python setlocal textwidth=79
 augroup END
 
 " set supertab to default to OmniCompletion
@@ -128,16 +128,18 @@ augroup END
 augroup filetype_markdown
     autocmd!
     autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-    autocmd Filetype markdown set textwidth=80
+    autocmd Filetype markdown setlocal textwidth=80
 augroup END
 
 " Set smartcase off for HTML (stuffs up HTML autocomplete)
 " Set tabspace = 2 for HTML
+" turn off linewrap for HTML
 augroup filetype_html
     autocmd!
-    autocmd Filetype html,htmldjango set noignorecase
-    autocmd Filetype html,htmldjango set nosmartcase
+    autocmd Filetype html,htmldjango setlocal noignorecase
+    autocmd Filetype html,htmldjango setlocal nosmartcase
     autocmd Filetype html,htmldjango setlocal ts=2 expandtab shiftwidth=2 softtabstop=2
+    autocmd Filetype html,htmldjango setlocal textwidth=0
 augroup END
 
 " Set CTRL-Tab to change recent buffer in normal mode
