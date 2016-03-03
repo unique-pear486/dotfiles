@@ -177,3 +177,6 @@ nnoremap Y y$
 
 " Make diffs split the screen vertically, not horizontally
 set diffopt+=vertical
+
+" Use Relative numbering
+set relativenumber
