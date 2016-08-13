@@ -18,7 +18,7 @@ done
 # Get google app engine if not already installed
 if ! [ -d "/opt/google_appengine" ]; then
     echo "installing Google App Engine v1.9.30"
-    wget -O /tmp/GAE.zip https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.30.zip
+    wget -O /tmp/GAE.zip https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.40.zip
     unzip -q /tmp/GAE.zip -d /opt/
     rm /tmp/GAE.zip
     if ! grep -q "google app engine" ~/.profile ; then
