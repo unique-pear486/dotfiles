@@ -18,8 +18,9 @@ dotfiles() {
     git config --global user.name "unique-pear486"
     git config --global user.email "unique-pear486@users.noreply.github.com"
     git config --global push.default simple
-    git config --global alias.hist 'log --graph --full-history --all --pretty=format:"%Cred%h%Creset %ad %<(40,trunc) %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset" --date=short'
+    git config --global alias.hist '!tput rmam; git log --graph --full-history --all --pretty=format:"%Cred%h%Creset %ad %<(40,trunc) %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset" --date=short; tput smam'
     git config --global alias.co checkout
+    git config --global alias.st status
     git config --global alias.wipe '!git add -A && git commit -qm "WIPE SAVEPOINT" && git reset HEAD~1 --hard'
     git config --global init.templatedir '~/.git_template'
 
