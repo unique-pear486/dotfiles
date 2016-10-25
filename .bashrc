@@ -7,3 +7,4 @@ alias refalac='wine ~/.wine/drive_c/qaac/refalac.exe'
 
 # Turn off a few pesky warnings (well, actually all of them!):
 export WINEDEBUG=-all
+export PATH=$PATH:~/bin/
