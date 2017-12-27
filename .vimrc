@@ -142,6 +142,12 @@ augroup filetype_html
     autocmd Filetype html,htmldjango setlocal textwidth=0
 augroup END
 
+" Set tabspace = 2 for javascript
+augroup filetype_js
+    autocmd!
+    autocmd Filetype javascript setlocal ts=2 expandtab shiftwidth=2 softtabstop=2
+augroup END
+
 " Set CTRL-Tab to change recent buffer in normal mode
 nnoremap <c-tab> :b#<cr>
 
