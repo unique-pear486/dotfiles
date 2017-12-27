@@ -145,20 +145,6 @@ augroup END
 " Set CTRL-Tab to change recent buffer in normal mode
 nnoremap <c-tab> :b#<cr>
 
-" Syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_python_checkers = ['flake8']
-nnoremap <F7> :SyntasticReset<CR>
-
 " Use <C-motion> to navigate windows
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
@@ -180,3 +166,9 @@ set diffopt+=vertical
 
 " Use Relative numbering
 set relativenumber
+
+" ALE settings
+"let g:ale_set_loclist = 0
+"let g:ale_set_quickfix = 1
+let g:ale_fixers = { 'javascript': ['prettier'] }
+nnoremap <F11> :ALEFix<cr>

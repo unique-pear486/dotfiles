@@ -55,7 +55,7 @@ dotfiles() {
         ~/.vim/bundle/tcomment_vim \
         ~/.vim/bundle/vim-surround \
         ~/.vim/bundle/supertab \
-        ~/.vim/bundle/syntastic \
+        ~/.vim/bundle/ale \
         ~/.bashrc \
         ~/.pythonrc.py \
         ~/.abcde.conf \
