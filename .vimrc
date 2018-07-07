@@ -16,10 +16,9 @@ if 'VIRTUAL_ENV' in os.environ:
 EOF
 endif
 
-" enable pathogen
-runtime autoload/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
+" setup help for packages
+packloadall
+silent! helptags ALL
 
 " enable syntax highlighting
 syntax enable

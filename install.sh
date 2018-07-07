@@ -43,19 +43,17 @@ dotfiles() {
 
     for filename in \
         ~/.vimrc \
-        ~/.vim/autoload/pathogen.vim  \
         ~/.cvsignore \
         ~/.inputrc \
-        ~/.vim/bundle/jedi-vim \
-        ~/.vim/bundle/solarized \
-        ~/.vim/autoload/vim-pathogen \
-        ~/.vim/bundle/vim-fugitive \
-        ~/.vim/bundle/vim-unimpaired \
-        ~/.vim/bundle/tagbar \
-        ~/.vim/bundle/tcomment_vim \
-        ~/.vim/bundle/vim-surround \
-        ~/.vim/bundle/supertab \
-        ~/.vim/bundle/ale \
+        ~/.vim/pack/git-plugins/start/jedi-vim \
+        ~/.vim/pack/git-plugins/start/solarized \
+        ~/.vim/pack/git-plugins/start/vim-fugitive \
+        ~/.vim/pack/git-plugins/start/vim-unimpaired \
+        ~/.vim/pack/git-plugins/start/tagbar \
+        ~/.vim/pack/git-plugins/start/tcomment_vim \
+        ~/.vim/pack/git-plugins/start/vim-surround \
+        ~/.vim/pack/git-plugins/start/supertab \
+        ~/.vim/pack/git-plugins/start/ale \
         ~/.bashrc \
         ~/.pythonrc.py \
         ~/.abcde.conf \
