@@ -9,11 +9,11 @@ fi
 
 apt-get update
 
-for package in vim-gtk python3 exuberant-ctags tree python-pip \
+for package in vim-gtk3 python3 exuberant-ctags tree python-pip \
     python-virtualenv curl
 do
     apt-get install -y $package
 done
 
 # install python packages
-pip install virtualenvwrapper
+pip install pipenv
