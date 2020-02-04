@@ -24,13 +24,6 @@ dotfiles() {
     git config --global alias.wipe '!git add -A && git commit -qm "WIPE SAVEPOINT" && git reset HEAD~1 --hard'
     git config --global init.templatedir '~/.git_template'
 
-    # vim settings
-    mkdir -p ~/.vim/tmp
-
-    # install and pull submodules
-    git submodule update --init --recursive
-    git submodule update --recursive
-
     # make links from location to dotfiles
     read -p 'old-dotfiles will be overwritten! OK? ' yn
     case $yn in
@@ -45,14 +38,7 @@ dotfiles() {
         ~/.vimrc \
         ~/.cvsignore \
         ~/.inputrc \
-        ~/.vim/pack/git-plugins/start/jedi-vim \
-        ~/.vim/pack/git-plugins/start/solarized \
-        ~/.vim/pack/git-plugins/start/vim-fugitive \
-        ~/.vim/pack/git-plugins/start/vim-unimpaired \
-        ~/.vim/pack/git-plugins/start/tagbar \
-        ~/.vim/pack/git-plugins/start/tcomment_vim \
-        ~/.vim/pack/git-plugins/start/vim-surround \
-        ~/.vim/pack/git-plugins/start/supertab \
+        ~/.config/nvim/init.vim \
         ~/.vim/pack/git-plugins/start/ale \
         ~/.bashrc \
         ~/.pythonrc.py \
@@ -71,6 +57,9 @@ dotfiles() {
         mkdir -p ${filename%/*}
         ln -s $(pwd)/${filename##*/} ${filename%/*}
     done
+
+    # Install dein
+    git clone https://github.com/Shougo/dein.vim "~/.cache/dein/"
 }
 
 while getopts "pds" o; do
