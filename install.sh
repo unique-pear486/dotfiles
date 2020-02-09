@@ -44,6 +44,7 @@ dotfiles() {
         ~/.pythonrc.py \
         ~/.abcde.conf \
         ~/.git_template \
+        ~/.config/alacritty/alacritty.yml \
         ;
     do
         if [ -L $filename ]
@@ -59,7 +60,8 @@ dotfiles() {
     done
 
     # Install dein
-    git clone https://github.com/Shougo/dein.vim "~/.cache/dein/"
+    mkdir -p "~/.cache/dein/repos/github.com/Shougo/dein.vim"
+    git clone https://github.com/Shougo/dein.vim "~/.cache/dein/repos/github.com/Shougo/dein.vim"
 }
 
 while getopts "pds" o; do
